@@ -1,6 +1,5 @@
 .env
 db.sqlite3
-projectfolder
 Scripts
 Lib
 pyvenv.cfg
