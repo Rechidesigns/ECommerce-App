@@ -88,8 +88,12 @@ WSGI_APPLICATION = 'projectfolder.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dcotqq1dme4bro',
+        'USER': 'ojsybzauszthio',
+        'PORT': '5432',
+        'PASSWORD': '358184d0daf1b76a63f343ac2eef6c526f16a41f411e3dccbf717481c62efb84',
+        'HOST': 'ec2-54-86-224-85.compute-1.amazonaws.com',
     }
 }
 
@@ -145,8 +149,15 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 #'django.core.mail.backends.smtp.EmailBackend'
 # use smtp wen finishing the job. meanwhile, wen testing use console.
 
+EMAIL_HOST = 'smtp.gmass.co'
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = 465
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
 
-DEFAULT_FROM_EMAIL = 'Ebere from Rechie <noreply@rechie.com>'
+
+DEFAULT_FROM_EMAIL = 'Clara from Rechie <noreply@rechie.com>'
 
 SITE_NAME = 'Rechie'
 
